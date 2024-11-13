@@ -1,6 +1,6 @@
 .menu {
     display: flex;
-    gap: 10px; /* Odstęp między przyciskami */
+    gap: 10px; 
     justify-content: center;
     margin-top: 20px;
     position:absolute
