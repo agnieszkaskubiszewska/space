@@ -42,6 +42,13 @@ class App extends Component {
         >
           S  P  A  C  E
         </div>
+        {this.state.isMenuVisible && (
+          <div className='hello'>
+            <p>Dive into the <br />marvelous <br />adventure <br />
+              of exploring <br />Agnieszka's <br />very first, 
+              <br />freshly-crafted <br />webpage <br />extravaganza!</p>
+          </div>
+        )}
       <Footer />
       </div>
     );
@@ -49,3 +56,4 @@ class App extends Component {
 }
 
 export default App;
+

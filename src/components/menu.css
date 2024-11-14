@@ -1,7 +1,7 @@
 .menu {
   display: flex;
   gap: 10px;
-  justify-content: center;
+  right: 0; /* Aligns the menu to the right */
   margin-top: 20px;
   position: absolute;
 }

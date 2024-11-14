@@ -34,3 +34,17 @@
   height: auto;
   display: block;
 }
+
+.hello {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-align: left;
+  font-size: 3vw;
+  transition: filter 5s ease, opacity 5s ease; 
+  font-family: 'Nasalization', sans-serif;
+  filter: blur(1px);
+}
