@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
 import Menu from './menu';
+import Footer from './Footer';
 
 class App extends Component {
   state = {
@@ -41,6 +42,7 @@ class App extends Component {
         >
           S  P  A  C  E
         </div>
+      <Footer />
       </div>
     );
   }
