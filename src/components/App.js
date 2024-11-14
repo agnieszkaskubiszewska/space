@@ -5,21 +5,23 @@ import Menu from './menu';
 class App extends Component {
   state = {
     isTextBlurred: true,
-    isTextVisible: true
+    isTextVisible: true,
+    isMenuVisible: false
   };
 
   handleClick = (event) => {
     event.preventDefault();
     this.setState({
       isTextBlurred: false,
-      isTextVisible: true
+      isTextVisible: true,
+      isMenuVisible: true
     });
 
 
     setTimeout(() => {
       this.setState({
         isTextBlurred: true,  
-        isTextVisible: false 
+        isTextVisible: false,
       });
     }, 5000); 
   };
@@ -27,7 +29,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Menu />
+        {this.state.isMenuVisible && <Menu />}
         <img
           className="background-image"
           src="sky.png"

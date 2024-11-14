@@ -1,25 +1,73 @@
 .menu {
-    display: flex;
-    gap: 10px; 
-    justify-content: center;
-    margin-top: 20px;
-    position:absolute
-  }
-  
-  .menu button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: white;
-    background-color: #92d695;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    transform: scale(1);
-  }
-  
-  .menu button:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-  }
-  
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  position: absolute;
+}
+
+.menu button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #92d695;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  transform: scale(1);
+}
+
+.menu button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50vh;
+  width: 50vw;
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 10; 
+}
+.nasa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50vh;
+  width: 50vw;
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 10; 
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50vh;
+  width: 50vw;
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 10; 
+}
