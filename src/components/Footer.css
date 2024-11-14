@@ -1,0 +1,12 @@
+.footer {
+    color: #333333; 
+    display: inline-block;
+    margin: 0 10px 10px 10px;
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: #333333; 
+    font-size: 1.2rem; 
+    font-weight: 500; 
+  }
