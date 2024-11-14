@@ -15,17 +15,23 @@ class Menu extends Component {
   toggleAbout = () => {
     this.setState((prevState) => ({
       showAbout: !prevState.showAbout,
+      nasa: false,
+      gallery: false
     }));
   };
   toggleNasa = () => {
     this.setState((prevState) => ({
       nasa: !prevState.nasa,
+      showAbout: false,
+      gallery: false
     }));
   };
 
   toggleGallery = () => {
     this.setState((prevState) => ({
       gallery: !prevState.gallery,
+      nasa: false,
+      showAbout:false
     }));
   };
 
