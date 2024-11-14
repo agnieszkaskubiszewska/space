@@ -1,26 +1,59 @@
 import './App.css';
 import React, { Component } from 'react';
-import './menu.css'
+import './menu.css';
 
 class Menu extends Component {
-  state = {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showAbout: false,
+      nasa:false,
+      gallery:false
+    };
+  }
 
+  toggleAbout = () => {
+    this.setState((prevState) => ({
+      showAbout: !prevState.showAbout,
+    }));
+  };
+  toggleNasa = () => {
+    this.setState((prevState) => ({
+      nasa: !prevState.nasa,
+    }));
   };
 
-  handleClick = (event) => {
-    event.preventDefault(); 
-    this.setState({ 
-      
-    });
+  toggleGallery = () => {
+    this.setState((prevState) => ({
+      gallery: !prevState.gallery,
+    }));
   };
 
   render() {
     return (
       <div className="menu">
-        <button>About</button>
-        <button>Wylosuj coś</button>
-        <button>Galeria</button>
-        </div>
+        <button onClick={this.toggleAbout}>About</button>
+        <button onClick={this.toggleNasa}>Randomize something</button>
+        <button onClick={this.toggleGallery}>Gallery</button>
+
+        {this.state.showAbout && (
+          <div className="about">
+            Tu bedzie cos o mnie
+          </div>
+        )}
+
+        {this.state.nasa && (
+          <div className="nasa">
+            Api nasa
+          </div>
+        )}
+                
+        {this.state.gallery && (
+          <div className="gallery">
+            Galeria
+          </div>
+        )}
+      </div>
     );
   }
 }
