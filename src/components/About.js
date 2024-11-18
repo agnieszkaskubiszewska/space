@@ -2,6 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { images } from "./imageData";
+import './About.css'
 
 const variants = {
   enter: (direction) => {

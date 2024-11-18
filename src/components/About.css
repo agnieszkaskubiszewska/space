@@ -18,7 +18,7 @@ body {
   align-items: center;
   border: 1px solid black;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden; /* Zapobiega wychodzeniu zawartości */
+  overflow: hidden; 
 }
 
 .example-container {
@@ -32,38 +32,40 @@ body {
 
 .next,
 .prev {
-  top: calc(50% - 20px);
+  top: 50%;                 /* Ustawienie na środek */
   position: absolute;
-  background: white;
-  border-radius: 30px;
-  width: 40px;
-  height: 40px;
+  background: white;       /* Tło białe */
+  border-radius: 50%;      /* Okrągłe przyciski */
+  width: 60px;             /* Zwiększenie rozmiaru przycisku */
+  height: 60px;            /* Zwiększenie rozmiaru przycisku */
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
   cursor: pointer;
   font-weight: bold;
-  font-size: 18px;
-  z-index: 2;
+  font-size: 30px;         /* Zwiększenie rozmiaru tekstu */
+  z-index: 1000;           /* Ustawienie wysokiego z-index, aby były widoczne */
+  color: #151515;          /* Kolor tekstu */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Cień wokół przycisków */
 }
 
 .next {
-  right: 10px;
+  right: 10px;             /* Przyciśnij przycisk "next" do prawej */
 }
 
 .prev {
-  left: 10px;
-  transform: scale(-1);
+  left: 10px;              /* Przyciśnij przycisk "prev" do lewej */
+  transform: scale(-1);    /* Obróć przycisk "prev" dla kierunku */
 }
 
+/* Dodajemy także styl dla img, aby upewnić się, że obrazki się zmieszczą */
 img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain; /* Dopasowanie obrazu z zachowaniem proporcji */
-  position: relative;
-  display: block;
+  max-width: 100%;         /* Dopasowanie szerokości */
+  max-height: 100%;        /* Dopasowanie wysokości */
+  object-fit: cover;       /* Zapewnia odpowiednie przycięcie obrazu */
 }
+
 
 .refresh {
   padding: 10px;
