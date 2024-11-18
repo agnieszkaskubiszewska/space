@@ -63,7 +63,7 @@
   border-right: 0.15em solid white; /* Efekt kursora */
   white-space: nowrap; /* Zapobiega łamaniu tekstu */
   letter-spacing: 0.15em;
-  animation: typing 1.5s steps(30, end), blink-caret 0.5s step-end infinite; /* Dopasuj steps() do liczby znaków w linii */
+  animation: typing 1.5s steps(30, end), blink-caret 0.7s step-end infinite; /* Dopasuj steps() do liczby znaków w linii */
   animation-fill-mode: forwards; /* Pozostawia efekt animacji */
   visibility: hidden; /* Domyślnie ukryty */
 }
