@@ -6,6 +6,7 @@ body {
   align-items: center;
   background: #151515;
   overflow: hidden;
+  position: absolute;
 }
 
 .about {
@@ -32,38 +33,38 @@ body {
 
 .next,
 .prev {
-  top: 50%;                 /* Ustawienie na środek */
+  top: 50%;                 
   position: absolute;
-  background: white;       /* Tło białe */
-  border-radius: 50%;      /* Okrągłe przyciski */
-  width: 60px;             /* Zwiększenie rozmiaru przycisku */
-  height: 60px;            /* Zwiększenie rozmiaru przycisku */
+  background: white;       
+  border-radius: 50%;     
+  width: 60px;             
+  height: 60px;            
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
   cursor: pointer;
   font-weight: bold;
-  font-size: 30px;         /* Zwiększenie rozmiaru tekstu */
-  z-index: 1000;           /* Ustawienie wysokiego z-index, aby były widoczne */
-  color: #151515;          /* Kolor tekstu */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Cień wokół przycisków */
+  font-size: 30px;        
+  z-index: 1000;           
+  color: #151515;          
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .next {
-  right: 10px;             /* Przyciśnij przycisk "next" do prawej */
+  right: 10px;            
 }
 
 .prev {
-  left: 10px;              /* Przyciśnij przycisk "prev" do lewej */
-  transform: scale(-1);    /* Obróć przycisk "prev" dla kierunku */
+  left: 10px;             
+  transform: scale(-1);    
 }
 
-/* Dodajemy także styl dla img, aby upewnić się, że obrazki się zmieszczą */
+
 img {
-  max-width: 100%;         /* Dopasowanie szerokości */
-  max-height: 100%;        /* Dopasowanie wysokości */
-  object-fit: cover;       /* Zapewnia odpowiednie przycięcie obrazu */
+  max-width: 100%;         
+  max-height: 100%;       
+  object-fit: cover;      
 }
 
 
