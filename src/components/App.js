@@ -44,9 +44,12 @@ class App extends Component {
         </div>
         {this.state.isMenuVisible && (
           <div className='hello'>
-            <p>Dive into the <br />marvelous <br />adventure <br />
-              of exploring <br />Agnieszka's <br />very first, 
-              <br />freshly-crafted <br />webpage <br />extravaganza!</p>
+           <p id="typing-effect" className="typing-effect">
+    <span className="line" style={{ animationDelay: "0s" }}>Dive into the   </span><br />
+    <span className="line" style={{ animationDelay: "1.5s" }}>adventure   </span><br />
+    <span className="line" style={{ animationDelay: "3s" }}>of exploring   </span><br />
+    <span className="line" style={{ animationDelay: "4.5s" }}>my page   </span><br />
+  </p>
           </div>
         )}
       <Footer />
