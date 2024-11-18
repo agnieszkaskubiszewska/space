@@ -1,17 +1,18 @@
 import './App.css';
 import React, { Component } from 'react';
 import './menu.css';
+import { motion } from "framer-motion";
+import About from './About';
 
 class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = {
       showAbout: false,
-      nasa:false,
-      gallery:false
+      nasa: false,
+      gallery: false
     };
-  }
-
+  } 
   toggleAbout = () => {
     this.setState((prevState) => ({
       showAbout: !prevState.showAbout,
@@ -19,6 +20,7 @@ class Menu extends Component {
       gallery: false
     }));
   };
+
   toggleNasa = () => {
     this.setState((prevState) => ({
       nasa: !prevState.nasa,
@@ -31,20 +33,41 @@ class Menu extends Component {
     this.setState((prevState) => ({
       gallery: !prevState.gallery,
       nasa: false,
-      showAbout:false
+      showAbout: false
     }));
   };
 
   render() {
     return (
       <div className="menu">
-        <button onClick={this.toggleAbout}>About</button>
-        <button onClick={this.toggleNasa}>Randomize something</button>
-        <button onClick={this.toggleGallery}>Gallery</button>
+        <motion.button
+          whileHover={{ scale: 1.1 }}      
+          whileTap={{ scale: 0.95 }}   
+          onClick={this.toggleAbout}    
+        >
+          About
+        </motion.button>
+
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={this.toggleNasa}
+        >
+          Randomize something
+        </motion.button>
+
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={this.toggleGallery}
+        >
+          Gallery
+        </motion.button>
+
 
         {this.state.showAbout && (
           <div className="about">
-            Tu bedzie cos o mnie
+            <About />
           </div>
         )}
 
@@ -53,7 +76,7 @@ class Menu extends Component {
             Api nasa
           </div>
         )}
-                
+
         {this.state.gallery && (
           <div className="gallery">
             Galeria
