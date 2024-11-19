@@ -4,16 +4,16 @@ import "react-image-gallery/styles/css/image-gallery.css";
 
 const images = [
   {
-    original: "/images/photo1.jpg",
-    thumbnail: "/images/thumb1.jpg",
+    original: "gallery/nebula1.jpg",
+
   },
   {
-    original: "/images/photo2.jpg",
-    thumbnail: "/images/thumb2.jpg",
+    original: "gallery/nebula2.jpg",
+
   },
   {
-    original: "/images/photo3.jpg",
-    thumbnail: "/images/thumb3.jpg",
+    original: "gallery/nebula3.jpg",
+
   },
 ];
 

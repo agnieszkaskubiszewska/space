@@ -4,6 +4,7 @@ import './menu.css';
 import { motion } from "framer-motion";
 import About from './About';
 import './About.css'
+import MyGallery from './Gallery';
 
 class Menu extends Component {
   constructor(props) {
@@ -80,7 +81,7 @@ class Menu extends Component {
 
         {this.state.gallery && (
           <div className="gallery">
-            Galeria
+            <MyGallery />
           </div>
         )}
       </div>
