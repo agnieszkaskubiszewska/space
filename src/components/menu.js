@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import About from './About';
 import './About.css'
 import MyGallery from './Gallery';
+import NasaApi from './Nasa'
 
 class Menu extends Component {
   constructor(props) {
@@ -75,7 +76,7 @@ class Menu extends Component {
 
         {this.state.nasa && (
           <div className="nasa">
-            Api nasa
+            <NasaApi/>
           </div>
         )}
 

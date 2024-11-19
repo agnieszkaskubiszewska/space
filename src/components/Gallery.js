@@ -14,6 +14,30 @@ const images = [
   {
     original: "gallery/nebula3.jpg",
 
+  },  
+  {
+    original: "gallery/nebula4.jpg",
+
+  },  
+  {
+    original: "gallery/nebula5.jpg",
+
+  },  
+  {
+    original: "gallery/nebula6.jpg",
+
+  },  
+  {
+    original: "gallery/nebula7.jpg",
+
+  },
+  {
+    original: "gallery/nebula8.jpg",
+
+  },
+  {
+    original: "gallery/nebula9.jpg",
+
   },
 ];
 
