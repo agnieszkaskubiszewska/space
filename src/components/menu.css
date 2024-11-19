@@ -22,7 +22,7 @@
   background: linear-gradient(135deg, #497bc6 0%, #5e779b 50%, #97a7bd 100%);
 }
 
-.nasa, .gallery {
+.nasa {
   display: flex;
   color: white;
   justify-content: center;
@@ -34,6 +34,24 @@
   height: 50vh;
   width: 50vw;
   background-color: rgba(0, 0, 0, 0.8); 
+  border: 1px solid transparent;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 10; 
+}
+
+.gallery {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60vh;
+  width: 60vw;
+  background-color: transparent;
   border: 1px solid transparent;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
