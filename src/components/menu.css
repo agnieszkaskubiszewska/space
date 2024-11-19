@@ -19,7 +19,7 @@
 }
 
 .menu button:hover {
-  background-color: #45a049;
+  background: linear-gradient(135deg, #497bc6 0%, #5e779b 50%, #97a7bd 100%);
 }
 
 .nasa, .gallery {

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import './menu.css';
 import { motion } from "framer-motion";
 import About from './About';
+import './About.css'
 
 class Menu extends Component {
   constructor(props) {
@@ -53,7 +54,7 @@ class Menu extends Component {
           whileTap={{ scale: 0.95 }}
           onClick={this.toggleNasa}
         >
-          Randomize something
+          NASA API
         </motion.button>
 
         <motion.button
