@@ -30,11 +30,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <img
+        {this.state.isMenuVisible && <img
           className="logo"
           src="logo.png"
           alt="Logo strony"
-        />
+        />}
         {this.state.isMenuVisible && <Menu />}
         <img
           className="background-image"
@@ -45,7 +45,7 @@ class App extends Component {
           onClick={this.handleClick}
           className={`appTitle ${this.state.isTextBlurred ? 'blurred' : ''} ${this.state.isTextVisible ? '' : 'hidden'}`}
         >
-          S  P  A  C  E
+          S    P    A    C    E
         </div>
         {this.state.isMenuVisible && (
           <div className='hello'>
