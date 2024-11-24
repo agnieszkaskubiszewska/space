@@ -3,31 +3,31 @@ import axios from "axios";
 import './Nasa.css'
 
 const getRandomDate = () => {
-  const start = new Date(1995, 5, 16); // APOD dostępne od tej daty
-  const end = new Date(); // Dzisiejsza data
+  const start = new Date(1995, 5, 16); 
+  const end = new Date(); 
   const randomDate = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-  return randomDate.toISOString().split("T")[0]; // Format YYYY-MM-DD
+  return randomDate.toISOString().split("T")[0]; 
 };
 
 const NasaFunFacts = () => {
-  const [fact, setFact] = useState(null); // Przechowuje dane z API
-  const [loading, setLoading] = useState(false); // Obsługa ładowania
-  const [error, setError] = useState(null); // Obsługa błędów
+  const [fact, setFact] = useState(null); 
+  const [loading, setLoading] = useState(false); 
+  const [error, setError] = useState(null); 
 
   const fetchFact = async () => {
     setLoading(true);
     setError(null);
 
     try {
-      const randomDate = getRandomDate(); // Generowanie losowej daty
+      const randomDate = getRandomDate(); 
       const response = await axios.get("https://api.nasa.gov/planetary/apod", {
         params: {
-          api_key: "4rCD5fB01JP5acQc0XaZv2pvuUizl4zIuYNMqoGo", // Wstaw swój klucz API
+          api_key: process.env.REACT_APP_NASA_API_KEY, 
           date: randomDate,
         },
       });
 
-      setFact(response.data); // Zapisanie ciekawostki do stanu
+      setFact(response.data);
     } catch (err) {
       setError("Could not fetch data. Please try again later.");
     } finally {
