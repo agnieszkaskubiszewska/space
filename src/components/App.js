@@ -30,6 +30,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <img
+          className="logo"
+          src="logo.png"
+          alt="Logo strony"
+        />
         {this.state.isMenuVisible && <Menu />}
         <img
           className="background-image"

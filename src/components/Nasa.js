@@ -41,14 +41,14 @@ const NasaFunFacts = () => {
       <button className="nasa-btn"
         onClick={fetchFact}
       >
-        Generate Fun Fact
+        {fact ? 'More Fun Fact' : 'Generate Fun Fact'}
       </button>
 
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
       {fact && (
         <div className="facts">
-          <div style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+          <div style={{ backgroundColor: "rgba(0, 0, 0, 0.1)" }}>
             <h2>{fact.title}</h2>
             <p>{fact.explanation}</p>
             {fact.url && <img src={fact.url} alt={fact.title} style={{ maxWidth: "50%", borderRadius: "10px" }} />}

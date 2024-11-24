@@ -1,7 +1,23 @@
 .App {
   text-align: center;
 }
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
+.background-image {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  object-fit: cover; 
+}
+.logo{
+position :absolute;
+  left: 20px;
+
+}
 .appTitle {
   position: absolute;
   top: 50%;
@@ -29,11 +45,6 @@
   display: inline-block;
 }
 
-.background-image {
-  width: 100vw;
-  height: 100vh;
-  display: block;
-}
 
 .hello {
   position: absolute;
