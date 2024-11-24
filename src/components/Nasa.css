@@ -1,0 +1,20 @@
+
+.fun-facts{
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: "rgba(0, 0, 0, 0.5)";
+}
+
+.nasa-btn{
+    padding: 10px 20px;
+    font-size: 55px;
+    cursor: pointer;
+    background-color: #45a049;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+.facts{
+    margin: "20px"
+}
