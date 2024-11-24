@@ -2,12 +2,14 @@ import './App.css';
 import React, { Component } from 'react';
 import Menu from './menu';
 import Footer from './Footer';
+import { ReactTyped } from 'react-typed'; 
 
 class App extends Component {
   state = {
     isTextBlurred: true,
     isTextVisible: true,
-    isMenuVisible: false
+    isMenuVisible: false,
+    isFirstTextVisible: true 
   };
 
   handleClick = (event) => {
@@ -15,16 +17,16 @@ class App extends Component {
     this.setState({
       isTextBlurred: false,
       isTextVisible: true,
-      isMenuVisible: true
+      isMenuVisible: true,
+      isFirstTextVisible: false 
     });
-
 
     setTimeout(() => {
       this.setState({
-        isTextBlurred: true,  
+        isTextBlurred: true,
         isTextVisible: false,
       });
-    }, 5000); 
+    }, 5000);
   };
 
   render() {
@@ -41,6 +43,14 @@ class App extends Component {
           src="sky.jpg"
           alt="Obiekt na stronie"
         />
+        {this.state.isFirstTextVisible && (
+          <div className="first">
+            <ReactTyped
+              strings={['Touch the Space...']}
+              typeSpeed={90} 
+            />
+          </div>
+        )}
         <div
           onClick={this.handleClick}
           className={`appTitle ${this.state.isTextBlurred ? 'blurred' : ''} ${this.state.isTextVisible ? '' : 'hidden'}`}
@@ -48,20 +58,23 @@ class App extends Component {
           S    P    A    C    E
         </div>
         {this.state.isMenuVisible && (
-          <div className='hello'>
-           <p id="typing-effect" className="typing-effect">
-    <span className="line" style={{ animationDelay: "0s" }}>Dive into the   </span><br />
-    <span className="line" style={{ animationDelay: "1.5s" }}>adventure   </span><br />
-    <span className="line" style={{ animationDelay: "3s" }}>of exploring   </span><br />
-    <span className="line" style={{ animationDelay: "4.5s" }}>my page   </span><br />
-  </p>
+          <div className="hello">
+            <ReactTyped
+              strings={[
+                'Dive into the adventure...',
+                'Explore the secrets of space!',
+                'Welcome to my cosmic journey!',
+                'Let\'s explore together!'
+              ]}
+              typeSpeed={70} 
+              backSpeed={30} 
+            />
           </div>
         )}
-      <Footer />
+        <Footer />
       </div>
     );
   }
 }
 
 export default App;
-

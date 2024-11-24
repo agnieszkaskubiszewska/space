@@ -14,8 +14,9 @@ body, html {
   object-fit: cover; 
 }
 .logo{
-position :absolute;
+  position :absolute;
   left: 20px;
+  top: 20px;
 
 }
 .appTitle {
@@ -50,94 +51,23 @@ position :absolute;
 .hello {
   position: absolute;
   top: 50%;
-  left: 2%;
+  left: 20px;
   transform: translateY(-50%);
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  text-align: left;
-  font-size: 2.5vw; /* Zmniejszono rozmiar czcionki */
-  transition: filter 5s ease, opacity 5s ease; 
+  text-align: center;
+  font-size: 1.9vw; 
   font-family: 'Nasalization', sans-serif;
-  filter: blur(1px);
 }
-
-.typing-effect {
-  display: inline-block;
-  font-size: inherit;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  margin-top: 30%;
-}
-
-.line {
-  display: inline-block; /* Każda linia traktowana jako oddzielny blok */
-  overflow: hidden; /* Ukrywa tekst przed animacją */
-  border-right: 0.15em solid white; /* Efekt kursora */
-  white-space: nowrap; /* Zapobiega łamaniu tekstu */
-  letter-spacing: 0.15em;
-  animation: typing 1.5s steps(30, end), blink-caret 0.7s step-end infinite; /* Dopasuj steps() do liczby znaków w linii */
-  animation-fill-mode: forwards; /* Pozostawia efekt animacji */
-  visibility: hidden; /* Domyślnie ukryty */
-}
-
-
-.line:nth-child(1) {
-  animation-delay: 0s;
-  visibility: visible; 
-}
-
-.line:nth-child(2) {
-  animation-delay: 1.5s;
-  visibility: visible;
-}
-
-.line:nth-child(3) {
-  animation-delay: 3s;
-  visibility: visible;
-}
-
-.line:nth-child(4) {
-  animation-delay: 4.5s;
-  visibility: visible;
-}
-
-.line:nth-child(5) {
-  animation-delay: 6s;
-  visibility: visible;
-}
-
-.line:nth-child(6) {
-  animation-delay: 7.5s;
-  visibility: visible;
-}
-
-.line:nth-child(7) {
-  animation-delay: 9s;
-  visibility: visible;
-}
-
-.line:nth-child(8) {
-  animation-delay: 10.5s;
-  visibility: visible;
-}
-
-/* Animacja pisania */
-@keyframes typing {
-  from {
-    width: 0; 
+  .first {
+    position: absolute;
+    top: 30%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+    font-size: 3.5vw;
+    font-family: 'Nasalization', sans-serif;
+    letter-spacing: 0.1em;
   }
-  to {
-    width: 100%; 
-  }
-}
 
-/* Animacja migającego kursora */
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: white;
-  }
-}
