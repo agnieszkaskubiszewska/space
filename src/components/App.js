@@ -33,7 +33,7 @@ class App extends Component {
         {this.state.isMenuVisible && <Menu />}
         <img
           className="background-image"
-          src="sky.png"
+          src="sky.jpg"
           alt="Obiekt na stronie"
         />
         <div

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import './Nasa.css'
 
 const getRandomDate = () => {
   const start = new Date(1995, 5, 16); // APOD dostępne od tej daty
@@ -21,7 +22,7 @@ const NasaFunFacts = () => {
       const randomDate = getRandomDate(); // Generowanie losowej daty
       const response = await axios.get("https://api.nasa.gov/planetary/apod", {
         params: {
-          api_key: "sekret", // Wstaw swój klucz API
+          api_key: "4rCD5fB01JP5acQc0XaZv2pvuUizl4zIuYNMqoGo", // Wstaw swój klucz API
           date: randomDate,
         },
       });
@@ -35,19 +36,10 @@ const NasaFunFacts = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
+    <div  className="fun-facts">
       <h1>NASA Fun Facts</h1>
-      <button
+      <button className="nasa-btn"
         onClick={fetchFact}
-        style={{
-          padding: "10px 20px",
-          fontSize: "16px",
-          cursor: "pointer",
-          backgroundColor: "#45a049",
-          color: "white",
-          border: "none",
-          borderRadius: "5px",
-        }}
       >
         Generate Fun Fact
       </button>
@@ -55,10 +47,12 @@ const NasaFunFacts = () => {
       {loading && <p>Loading...</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
       {fact && (
-        <div style={{ marginTop: "20px" }}>
-          <h2>{fact.title}</h2>
-          <p>{fact.explanation}</p>
-          {fact.url && <img src={fact.url} alt={fact.title} style={{ maxWidth: "100%", borderRadius: "10px" }} />}
+        <div className="facts">
+          <div style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+            <h2>{fact.title}</h2>
+            <p>{fact.explanation}</p>
+            {fact.url && <img src={fact.url} alt={fact.title} style={{ maxWidth: "50%", borderRadius: "10px" }} />}
+          </div>
         </div>
       )}
     </div>
