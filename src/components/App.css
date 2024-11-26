@@ -63,12 +63,14 @@ body, html {
   .first {
     position: absolute;
     top: 30%; 
-    left: 50%;
+    left: 52%;
     transform: translate(-50%, -50%);
     color: #fff;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
     font-size: 3.5vw;
     font-family: 'Nasalization', sans-serif;
     letter-spacing: 0.1em;
+    filter: blur(1.5px);
+
   }
 

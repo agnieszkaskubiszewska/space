@@ -71,7 +71,7 @@ export const About = () => {
             maxWidth: "90%", 
             maxHeight: "90%",
             objectFit: "contain",
-            zIndex: 1 // Zmieniono na stałą wartość dla zapewnienia, że wszystkie elementy będą na tym samym poziomie
+            zIndex: 1 
           }}
         />
       </AnimatePresence>
