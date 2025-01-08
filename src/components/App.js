@@ -49,14 +49,6 @@ class App extends Component {
           src="sky.jpg"
           alt="Obiekt na stronie"
         />
-        {this.state.isFirstTextVisible && (
-          <div className="first">
-            <ReactTyped
-              strings={['  Touch the Space...']}
-              typeSpeed={90} 
-            />
-          </div>
-        )}
         <div
           onClick={this.handleClick}
           className={`appTitle ${this.state.isTextBlurred ? 'blurred' : ''} ${
